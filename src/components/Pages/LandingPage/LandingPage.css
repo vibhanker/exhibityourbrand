@@ -1,0 +1,218 @@
+:root{
+    --purple: #7762EF;  
+    --yellow: #FCA70C;  
+    --white: #fff;
+}
+
+.head{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 9rem;
+    height: 10rem;
+    position: fixed;
+    top: 0;
+}
+
+.head > .nav {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.head > .name > span {
+    font-size: 2rem;
+    font-weight: 800;
+    user-select: none;
+}
+.head > .name > span:nth-child(1) {
+color: var(--purple);
+}
+.head > .name > span:nth-child(2) {
+color: var(--yellow);
+}
+
+.head > .nav > span {
+color: var(--purple);
+padding: 0.4rem 2rem;
+user-select: none;
+cursor: pointer;
+}
+.head > .nav > span.btn {
+border: none;
+border-radius: 0;
+background-color: var(--yellow);
+color: var(--white);
+padding: 0.4rem 2rem;
+cursor: pointer;
+}
+
+.page{
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    /* flex-direction: column; */
+}
+
+.page > .content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 14rem;
+    gap: 3rem;
+    position: relative;
+    top: 2rem;
+}
+.page > img{
+    position: relative;
+    right: 11rem;
+    top: 3.5rem;
+    flex: 1;
+}
+
+.page > .content > .bold{
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 3rem;
+}
+.page > .content > .bold > .chunk-holder{
+    display: flex;
+    gap: 1rem;
+    /* flex-direction: column; */
+}
+.page > .content > .sub-line{
+    color: var(--purple);
+    width: 68%;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.page > .content > .ctas{
+    display: flex;
+    gap: 2rem;
+}
+.page > .content > .ctas > span{
+    font-size: 1.4rem;
+    padding: 0.8rem 3rem;
+    color: white;
+    background: var(--yellow);
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    box-shadow: 0 0 0 0 rgba(119, 98, 239, 0.707);
+}
+.page > .content > .ctas > span:hover{
+    box-shadow: 0.3rem 0.3rem 0 0 #402dae;
+    top: -0.3rem;
+    left: -0.3rem;
+    /* transition: all 1s; */
+}
+
+
+.color-purple {
+    color: var(--purple);
+}
+.color-yellow {
+    color: var(--yellow);
+}
+
+@media (max-width:414px) {
+    *{
+        user-select: none;
+    }
+    .page{
+        display: flex;
+        width: 100vw;
+        min-height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    .page > .content {
+        display: flex;
+        flex: 1 1;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 7rem;
+        padding-left: 11.6vw;
+        position: relative;
+    }
+
+    .head {
+        align-items: center;
+        display: flex;
+        height: 6rem;
+        justify-content: space-between;
+        padding: 0 3rem;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        background: #ffffffb3;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+    .head > .name > span {
+        font-size: 1.4rem;
+        font-weight: 800;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .page > .content > .bold {
+        display: flex;
+        flex-direction: column;
+        font-weight: 800;
+        font-size: 2.4rem;
+    }
+    .semi-bold {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 2.4rem;
+    }
+
+    .page > .content > .sub-line {
+        color: var(--purple);
+        width: 72%;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .page > .content > .ctas > span {
+        font-size: 1rem;
+        padding: 0.4rem 2rem;
+        color: white;
+        background: var(--yellow);
+        font-weight: 500;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        transition: all 0.1s;
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        box-shadow: 0 0 0 0 rgb(119 98 239 / 71%);
+    }
+
+    .page > img {
+        position: relative;
+        right: 0rem;
+        top: 1.5rem;
+        flex: 1 1;
+        transform: scale(0.75);
+        margin-bottom: 20rem;
+    }
+
+    .head > .nav {
+        display: none;
+    }
+}
